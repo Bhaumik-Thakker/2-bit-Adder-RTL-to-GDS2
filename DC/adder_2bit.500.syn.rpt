@@ -1,0 +1,244 @@
+1
+ 
+****************************************
+Report : design
+Design : adder_2bit
+Version: V-2023.12-SP5-1
+Date   : Sun Mar 30 18:42:45 2025
+****************************************
+
+Design allows ideal nets on clock nets.
+
+Library(s) Used:
+
+    asap7sc7p5t_22b_AO_RVT_TT_170906 (File: /usr/local2/ASAP7/afs/asu.edu/class/e/e/e/eee525b/asap7libs/asap7libs_24/db/asap7sc7p5t_22b_AO_RVT_TT_170906.db)
+    asap7sc7p5t_22b_SIMPLE_RVT_TT_170906 (File: /usr/local2/ASAP7/afs/asu.edu/class/e/e/e/eee525b/asap7libs/asap7libs_24/db/asap7sc7p5t_22b_SIMPLE_RVT_TT_170906.db)
+    asap7sc7p5t_22b_INVBUF_RVT_TT_170906 (File: /usr/local2/ASAP7/afs/asu.edu/class/e/e/e/eee525b/asap7libs/asap7libs_24/db/asap7sc7p5t_22b_INVBUF_RVT_TT_170906.db)
+    asap7sc7p5t_22b_OA_RVT_TT_170906 (File: /usr/local2/ASAP7/afs/asu.edu/class/e/e/e/eee525b/asap7libs/asap7libs_24/db/asap7sc7p5t_22b_OA_RVT_TT_170906.db)
+    asap7sc7p5t_22b_SEQ_RVT_TT_170906 (File: /usr/local2/ASAP7/afs/asu.edu/class/e/e/e/eee525b/asap7libs/asap7libs_24/db/asap7sc7p5t_22b_SEQ_RVT_TT_170906.db)
+
+Local Link Library:
+
+    {asap7sc7p5t_22b_AO_RVT_TT_170906.db, asap7sc7p5t_22b_INVBUF_RVT_TT_170906.db, asap7sc7p5t_22b_OA_RVT_TT_170906.db, asap7sc7p5t_22b_SEQ_RVT_TT_170906.db, asap7sc7p5t_22b_SIMPLE_RVT_TT_170906.db}
+
+Flip-Flop Types:
+
+    No flip-flop types specified.
+
+Latch Types:
+
+    No latch types specified.
+
+Operating Conditions:
+
+
+    Operating Condition Name : PVT_0P7V_25C
+    Library : asap7sc7p5t_22b_AO_RVT_TT_170906
+    Process :   1.00
+    Temperature :  25.00
+    Voltage :   0.70
+
+Wire Loading Model:
+
+    No wire loading specified.
+
+
+Wire Loading Model Mode: segmented.
+
+Timing Ranges:
+
+    No timing ranges specified.
+
+Pin Input Delays:
+
+    None specified.
+
+Pin Output Delays:
+
+    None specified.
+
+Disabled Timing Arcs:
+
+    No arcs disabled.
+
+Required Licenses:
+
+    DesignWare
+
+Design Parameters:
+
+    None specified.
+1
+ 
+****************************************
+Report : cell
+Design : adder_2bit
+Version: V-2023.12-SP5-1
+Date   : Sun Mar 30 18:42:45 2025
+****************************************
+
+Attributes:
+    b - black box (unknown)
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    u - contains unmapped logic
+
+Cell                      Reference       Library             Area  Attributes
+--------------------------------------------------------------------------------
+U14                       OAI21xp33_ASAP7_75t_R
+                                          asap7sc7p5t_22b_OA_RVT_TT_170906
+                                                          1.166400  
+U15                       NAND2xp5_ASAP7_75t_R
+                                          asap7sc7p5t_22b_SIMPLE_RVT_TT_170906
+                                                          0.933120  
+U16                       NAND3xp33_ASAP7_75t_R
+                                          asap7sc7p5t_22b_SIMPLE_RVT_TT_170906
+                                                          1.166400  
+U17                       NAND3xp33_ASAP7_75t_R
+                                          asap7sc7p5t_22b_SIMPLE_RVT_TT_170906
+                                                          1.166400  
+U18                       NAND2xp5_ASAP7_75t_R
+                                          asap7sc7p5t_22b_SIMPLE_RVT_TT_170906
+                                                          0.933120  
+U19                       OAI22xp5_ASAP7_75t_R
+                                          asap7sc7p5t_22b_OA_RVT_TT_170906
+                                                          1.399680  
+U20                       INVxp33_ASAP7_75t_R
+                                          asap7sc7p5t_22b_INVBUF_RVT_TT_170906
+                                                          0.699840  
+U21                       INVxp33_ASAP7_75t_R
+                                          asap7sc7p5t_22b_INVBUF_RVT_TT_170906
+                                                          0.699840  
+U22                       AOI22xp5_ASAP7_75t_R
+                                          asap7sc7p5t_22b_AO_RVT_TT_170906
+                                                          1.399680  
+U23                       NAND3xp33_ASAP7_75t_R
+                                          asap7sc7p5t_22b_SIMPLE_RVT_TT_170906
+                                                          1.166400  
+U24                       A2O1A1Ixp33_ASAP7_75t_R
+                                          asap7sc7p5t_22b_AO_RVT_TT_170906
+                                                          0.000000  
+cout_reg                  DFFHQNx1_ASAP7_75t_R
+                                          asap7sc7p5t_22b_SEQ_RVT_TT_170906
+                                                          4.665600  n
+sum_reg_0_                DFFHQNx1_ASAP7_75t_R
+                                          asap7sc7p5t_22b_SEQ_RVT_TT_170906
+                                                          4.665600  n
+sum_reg_1_                DFFHQNx1_ASAP7_75t_R
+                                          asap7sc7p5t_22b_SEQ_RVT_TT_170906
+                                                          4.665600  n
+--------------------------------------------------------------------------------
+Total 14 cells                                            24.727679
+1
+ 
+****************************************
+Report : port
+        -verbose
+Design : adder_2bit
+Version: V-2023.12-SP5-1
+Date   : Sun Mar 30 18:42:45 2025
+****************************************
+
+
+
+Attributes:
+    d - dont_touch_network
+
+                       Pin      Wire     Max     Max     Connection
+Port           Dir     Load     Load     Trans   Cap     Class      Attrs
+--------------------------------------------------------------------------------
+a[0]           in      0.0000   0.0000 1000.00  184.32   --         
+a[1]           in      0.0000   0.0000 1000.00  184.32   --         
+b[0]           in      0.0000   0.0000 1000.00  184.32   --         
+b[1]           in      0.0000   0.0000 1000.00  184.32   --         
+clk            in      0.0000   0.0000 1000.00  184.32   --         d
+cout           out     0.0100   0.0000   --      --      --         
+sum[0]         out     0.0100   0.0000   --      --      --         
+sum[1]         out     0.0100   0.0000   --      --      --         
+
+
+              External  Max             Min                Min       Min
+              Number    Wireload        Wireload           Pin       Wire
+Port          Points    Model           Model              Load      Load
+--------------------------------------------------------------------------------
+a[0]               1      --              --              --        -- 
+a[1]               1      --              --              --        -- 
+b[0]               1      --              --              --        -- 
+b[1]               1      --              --              --        -- 
+clk                1      --              --              --        -- 
+cout               1      --              --              --        -- 
+sum[0]             1      --              --              --        -- 
+sum[1]             1      --              --              --        -- 
+
+                    Input Delay
+                  Min             Max       Related   Max
+Input Port    Rise    Fall    Rise    Fall   Clock  Fanout
+--------------------------------------------------------------------------------
+a[0]          0.10    0.10    0.10    0.10  clk       --    
+a[1]          0.10    0.10    0.10    0.10  clk       --    
+b[0]          0.10    0.10    0.10    0.10  clk       --    
+b[1]          0.10    0.10    0.10    0.10  clk       --    
+clk           --      --      --      --      --      -- 
+
+
+                    Driving Cell
+Input Port   Rise(min/max)      Fall(min/max)      Mult(min/max)  Attrs(min/max)
+--------------------------------------------------------------------------------
+a[0]         INVx3_ASAP7_75t_R  INVx3_ASAP7_75t_R    -- /  --     
+a[1]         INVx3_ASAP7_75t_R  INVx3_ASAP7_75t_R    -- /  --     
+b[0]         INVx3_ASAP7_75t_R  INVx3_ASAP7_75t_R    -- /  --     
+b[1]         INVx3_ASAP7_75t_R  INVx3_ASAP7_75t_R    -- /  --     
+clk          INVx3_ASAP7_75t_R  INVx3_ASAP7_75t_R    -- /  --     
+
+
+               Max Drive      Min Drive      Resistance    Min    Min       Cell
+Input Port    Rise    Fall   Rise    Fall   Max     Min    Cap    Fanout    Deg
+--------------------------------------------------------------------------------
+a[0]          --      --     --      --     --      --     --     --        -- 
+a[1]          --      --     --      --     --      --     --     --        -- 
+b[0]          --      --     --      --     --      --     --     --        -- 
+b[1]          --      --     --      --     --      --     --     --        -- 
+clk           --      --     --      --     --      --     --     --        -- 
+
+
+               Max Tran        Min Tran
+Input Port    Rise    Fall    Rise    Fall
+--------------------------------------------------------------------------------
+a[0]          --      --      --      -- 
+a[1]          --      --      --      -- 
+b[0]          --      --      --      -- 
+b[1]          --      --      --      -- 
+clk           --      --      --      -- 
+
+
+                    Output Delay
+                  Min             Max      Related  Fanout
+Output Port   Rise    Fall    Rise    Fall  Clock     Load
+--------------------------------------------------------------------------------
+cout          0.10    0.10    0.10    0.10  clk       0.00  
+sum[0]        0.10    0.10    0.10    0.10  clk       0.00  
+sum[1]        0.10    0.10    0.10    0.10  clk       0.00  
+
+1
+ 
+****************************************
+Report : compile_options
+Design : adder_2bit
+Version: V-2023.12-SP5-1
+Date   : Sun Mar 30 18:42:45 2025
+****************************************
+
+Design                                   Compile Option         Value
+--------------------------------------------------------------------------------
+adder_2bit                               flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+                                         isolate_port           disabled
+                                         multibit_options
+                                           optimization_mode    non_timing_driven
+                                           minimum_width        2
+                                           exclude_registers_with_timing_exceptions false
+--------------------------------------------------------------------------------
+1

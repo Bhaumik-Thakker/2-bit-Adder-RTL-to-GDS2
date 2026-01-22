@@ -1,0 +1,26 @@
+ 
+****************************************
+Report : constraint
+        -all_violators
+        -verbose
+Design : adder_2bit
+Version: V-2023.12-SP5-1
+Date   : Sun Mar 30 13:51:34 2025
+****************************************
+
+This design has no violated constraints.
+
+1
+ 
+****************************************
+Report : constraint
+        -all_violators
+        -verbose
+Design : adder_2bit
+Version: V-2023.12-SP5-1
+Date   : Sun Mar 30 18:42:45 2025
+****************************************
+
+This design has no violated constraints.
+
+1

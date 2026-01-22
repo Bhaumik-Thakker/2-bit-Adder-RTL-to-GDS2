@@ -1,0 +1,231 @@
+(DELAYFILE
+  (SDFVERSION "3.0")
+  (DESIGN "adder_2bit")
+  (DATE "Sun Mar 30 19:32:49 2025")
+  (VENDOR "Cadence Design Systems, Inc.")
+  (PROGRAM "Innovus")
+  (VERSION "v17.12-s095_1 ((64bit) 11/09/2017 12:10 (Linux 2.6.18-194.el5))")
+  (DIVIDER /)
+  (VOLTAGE 0.700000::0.700000)
+  (PROCESS "1.000000::1.000000")
+  (TEMPERATURE 25.000000::25.000000)
+  (TIMESCALE 1.0 ps)
+
+  (CELL
+    (CELLTYPE  "adder_2bit")
+    (INSTANCE)
+      (DELAY
+	(ABSOLUTE
+	(INTERCONNECT a[1] FE_RC_1_0/A2  (0.200::0.200) (0.200::0.200))
+	(INTERCONNECT a[1] FE_RC_0_0/A  (0.200::0.200) (0.200::0.200))
+	(INTERCONNECT a[1] U17/C  (0.200::0.200) (0.200::0.200))
+	(INTERCONNECT a[0] U14/A2  (0.200::0.200) (0.200::0.200))
+	(INTERCONNECT a[0] U15/B  (0.200::0.200) (0.200::0.200))
+	(INTERCONNECT a[0] U16/B  (0.200::0.200) (0.200::0.200))
+	(INTERCONNECT a[0] U17/B  (0.200::0.200) (0.200::0.200))
+	(INTERCONNECT a[0] U23/B  (0.200::0.200) (0.200::0.200))
+	(INTERCONNECT a[0] U24/A1  (0.200::0.200) (0.200::0.200))
+	(INTERCONNECT b[1] FE_RC_1_0/A1  (0.200::0.200) (0.200::0.200))
+	(INTERCONNECT b[1] FE_RC_0_0/B  (0.200::0.200) (0.200::0.200))
+	(INTERCONNECT b[1] U16/C  (0.200::0.200) (0.200::0.200))
+	(INTERCONNECT b[0] U14/A1  (0.200::0.200) (0.200::0.200))
+	(INTERCONNECT b[0] U15/A  (0.200::0.200) (0.200::0.200))
+	(INTERCONNECT b[0] U16/A  (0.200::0.200) (0.200::0.200))
+	(INTERCONNECT b[0] U17/A  (0.200::0.200) (0.200::0.200))
+	(INTERCONNECT b[0] U23/A  (0.200::0.200) (0.200::0.200))
+	(INTERCONNECT b[0] U24/A2  (0.200::0.200) (0.200::0.200))
+	(INTERCONNECT sum_reg_1_/QN sum[1]  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT sum_reg_0_/QN sum[0]  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT clk cout_reg/CLK  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT clk sum_reg_1_/CLK  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT clk sum_reg_0_/CLK  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT cout_reg/QN cout  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT U24/Y sum_reg_1_/D  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT FE_RC_1_0/Y cout_reg/D  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT U14/Y sum_reg_0_/D  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT U15/Y U14/B  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT U17/Y U18/B  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT U16/Y U18/A  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT U18/Y FE_RC_1_0/B  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT U23/Y U24/C  (0.000::0.000) (0.000::0.000))
+	(INTERCONNECT FE_RC_0_0/Y U23/C  (0.100::0.100) (0.100::0.100))
+	(INTERCONNECT FE_RC_0_0/Y U24/B  (0.100::0.100) (0.100::0.100))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "AOI21xp5_ASAP7_75t_R")
+    (INSTANCE  FE_RC_1_0)
+      (DELAY
+	(ABSOLUTE
+	(IOPATH A1 Y  (8.400::8.400) (7.300::7.300))
+	(IOPATH A2 Y  (9.400::9.400) (7.500::7.500))
+	(IOPATH B Y  (9.200::9.200) (6.600::6.600))
+	(COND (~A1&~A2) (IOPATH B Y  (9.200::9.200) (6.600::6.600)))
+	(COND (~A1&A2) (IOPATH B Y  (9.200::9.200) (6.600::6.600)))
+	(COND (A1&~A2) (IOPATH B Y  (9.200::9.200) (6.600::6.600)))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "XOR2xp5_ASAP7_75t_R")
+    (INSTANCE  FE_RC_0_0)
+      (DELAY
+	(ABSOLUTE
+	(COND B (IOPATH A Y  (13.300::13.300) (10.100::10.100)))
+	(COND ~B (IOPATH A Y  (17.600::17.600) (14.900::14.900)))
+	(COND A (IOPATH B Y  (12.300::12.300) (9.800::9.800)))
+	(COND ~A (IOPATH B Y  (17.700::17.700) (14.200::14.200)))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "DFFHQNx1_ASAP7_75t_R")
+    (INSTANCE  cout_reg)
+      (DELAY
+	(ABSOLUTE
+	(IOPATH (posedge CLK) QN  (31.800::31.800) (31.500::31.500))
+	)
+      )
+      (TIMINGCHECK
+	(SETUPHOLD (posedge D) (posedge CLK) (8.888::8.888) (0.117::0.117))
+	(SETUPHOLD (negedge D) (posedge CLK) (0.944::0.944) (7.266::7.266))
+	(WIDTH (COND ~D (posedge CLK)) (25.940::25.940))
+	(WIDTH (COND ~D (negedge CLK)) (16.562::16.562))
+	(WIDTH (COND D (posedge CLK)) (25.940::25.940))
+	(WIDTH (COND D (negedge CLK)) (16.562::16.562))
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "DFFHQNx1_ASAP7_75t_R")
+    (INSTANCE  sum_reg_1_)
+      (DELAY
+	(ABSOLUTE
+	(IOPATH (posedge CLK) QN  (31.800::31.800) (31.500::31.500))
+	)
+      )
+      (TIMINGCHECK
+	(SETUPHOLD (posedge D) (posedge CLK) (9.338::9.338) (0.049::0.049))
+	(SETUPHOLD (negedge D) (posedge CLK) (4.273::4.273) (7.010::7.010))
+	(WIDTH (COND ~D (posedge CLK)) (25.940::25.940))
+	(WIDTH (COND ~D (negedge CLK)) (16.562::16.562))
+	(WIDTH (COND D (posedge CLK)) (25.940::25.940))
+	(WIDTH (COND D (negedge CLK)) (16.562::16.562))
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "DFFHQNx1_ASAP7_75t_R")
+    (INSTANCE  sum_reg_0_)
+      (DELAY
+	(ABSOLUTE
+	(IOPATH (posedge CLK) QN  (31.300::31.300) (31.000::31.000))
+	)
+      )
+      (TIMINGCHECK
+	(SETUPHOLD (posedge D) (posedge CLK) (9.497::9.497) (-0.004::-0.004))
+	(SETUPHOLD (negedge D) (posedge CLK) (3.203::3.203) (6.658::6.658))
+	(WIDTH (COND ~D (posedge CLK)) (25.940::25.940))
+	(WIDTH (COND ~D (negedge CLK)) (16.562::16.562))
+	(WIDTH (COND D (posedge CLK)) (25.940::25.940))
+	(WIDTH (COND D (negedge CLK)) (16.562::16.562))
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "OAI21xp33_ASAP7_75t_R")
+    (INSTANCE  U14)
+      (DELAY
+	(ABSOLUTE
+	(IOPATH A1 Y  (11.600::11.600) (10.000::10.000))
+	(IOPATH A2 Y  (11.000::11.000) (9.100::9.100))
+	(IOPATH B Y  (8.000::8.000) (10.300::10.300))
+	(COND (~A1&A2) (IOPATH B Y  (8.000::8.000) (10.300::10.300)))
+	(COND (A1&~A2) (IOPATH B Y  (8.000::8.000) (10.300::10.300)))
+	(COND (A1&A2) (IOPATH B Y  (8.000::8.000) (10.300::10.300)))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "NAND2xp5_ASAP7_75t_R")
+    (INSTANCE  U15)
+      (DELAY
+	(ABSOLUTE
+	(IOPATH A Y  (7.000::7.000) (6.400::6.400))
+	(IOPATH B Y  (6.100::6.100) (6.200::6.200))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "NAND3xp33_ASAP7_75t_R")
+    (INSTANCE  U16)
+      (DELAY
+	(ABSOLUTE
+	(IOPATH A Y  (6.600::6.600) (8.000::8.000))
+	(IOPATH B Y  (7.400::7.400) (8.800::8.800))
+	(IOPATH C Y  (7.400::7.400) (8.700::8.700))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "NAND3xp33_ASAP7_75t_R")
+    (INSTANCE  U17)
+      (DELAY
+	(ABSOLUTE
+	(IOPATH A Y  (6.900::6.900) (8.400::8.400))
+	(IOPATH B Y  (7.600::7.600) (9.200::9.200))
+	(IOPATH C Y  (7.700::7.700) (9.000::9.000))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "NAND2xp5_ASAP7_75t_R")
+    (INSTANCE  U18)
+      (DELAY
+	(ABSOLUTE
+	(IOPATH A Y  (8.500::8.500) (6.800::6.800))
+	(IOPATH B Y  (7.900::7.900) (6.900::6.900))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "NAND3xp33_ASAP7_75t_R")
+    (INSTANCE  U23)
+      (DELAY
+	(ABSOLUTE
+	(IOPATH A Y  (6.700::6.700) (8.200::8.200))
+	(IOPATH B Y  (7.400::7.400) (9.000::9.000))
+	(IOPATH C Y  (10.400::10.400) (11.000::11.000))
+	)
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "A2O1A1Ixp33_ASAP7_75t_R")
+    (INSTANCE  U24)
+      (DELAY
+	(ABSOLUTE
+	(IOPATH A1 Y  (10.900::10.900) (11.600::11.600))
+	(IOPATH A2 Y  (11.800::11.800) (11.900::11.900))
+	(IOPATH B Y  (12.500::12.500) (12.400::12.400))
+	(COND (~A1&~A2&C) (IOPATH B Y  (12.500::12.500) (12.400::12.400)))
+	(COND (~A1&A2&C) (IOPATH B Y  (12.500::12.500) (12.400::12.400)))
+	(COND (A1&~A2&C) (IOPATH B Y  (12.500::12.500) (12.400::12.400)))
+	(IOPATH C Y  (8.800::8.800) (11.100::11.100))
+	(COND (~A1&B) (IOPATH C Y  (8.800::8.800) (11.100::11.100)))
+	(COND (A1&~A2&B) (IOPATH C Y  (8.800::8.800) (11.100::11.100)))
+	(COND (A1&A2&~B) (IOPATH C Y  (8.800::8.800) (11.100::11.100)))
+	(COND (A1&A2&B) (IOPATH C Y  (8.800::8.800) (11.100::11.100)))
+	)
+      )
+  )
+)
